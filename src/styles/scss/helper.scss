@@ -1,0 +1,42 @@
+.section_helper{
+  background-image: url('/img/helper/helper_bg.png');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 90vh; //Чтобы влез фон без обрезки/искажений 
+  @media(max-width: 850px){
+    background-position: center bottom;
+    background-size: contain;
+    min-height: 80vh;
+  }
+}
+
+.container_helper{
+  display: flex;
+  justify-content: center;
+}
+
+.helper{
+  &__list-wrap{
+    margin: 2.3rem -50% 2.3rem 0;
+    @media(max-width: 850px){
+      margin: 2.3rem 0 !important;
+    }
+  }
+  &__list-item{
+    display: flex;
+    margin: 2.3rem 0;
+  }
+
+  &__item-img{
+    width: 45px;
+    height: 45px;
+    margin: 0 1.5rem 0 0;
+  }
+
+  &__item-text{
+    color: $primary-text-color;
+    font-size: 0.73rem;
+    width: 160px;
+  }
+}

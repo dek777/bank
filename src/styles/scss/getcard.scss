@@ -1,0 +1,114 @@
+.section_getcard{
+  margin: 1.5rem 0 !important;
+}
+
+.getcard-features__wrap{
+  display: flex;
+  justify-content: center; 
+  margin: 1rem auto;
+  @media(max-width: 590px){
+    flex-direction: column;
+    justify-content: flex-start;
+    width: max-content;
+  }
+}
+
+.getcard-feature{
+  margin: 10px;
+
+  &__title{
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: $action-color;
+  }
+
+  &__text{
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: $secondary-text-color;
+    max-width: 150px;
+  }
+
+  &__text_width-220px{
+    max-width: 220px;
+  }
+}
+
+.getcard__wrap{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 50px;
+  margin: 2rem 0;
+  @media(max-width: 1030px){
+    gap: 40px;
+    grid-template-columns: 1fr 1.5fr;
+  }
+  @media(max-width: 450px){
+    grid-template-columns: 1fr;
+  }
+}
+
+.getcard__img{
+  width: 100%;
+}
+
+.getcard__tabs {
+
+  & > input[type="radio"] {
+    display: none;
+  }
+
+  & > div {
+    /* скрыть контент по умолчанию */
+    display: none;
+    font-size: 1rem;
+  }
+
+  & > label {
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 0.8rem;
+    transition: all 0.15s ease-in-out;
+    cursor: pointer;
+    color: $secondary-text-color;
+    font-weight: 600;
+  }
+
+  & > input[type="radio"]:checked + label {
+    color: $action-color;
+  }
+}
+
+/* отобразить контент, связанный с вабранной радиокнопкой (input type="radio") */
+#getcard__tab-btn-1:checked ~ #getcard__tab-1,
+#getcard__tab-btn-2:checked ~ #getcard__tab-2{
+  display: block;
+}
+
+.getcard__table{
+  border: 0;
+  outline: 0;
+  font-size: 0.63rem;
+  font-weight: 500;
+
+  & tr{
+    vertical-align: top;
+  }
+
+  & td{
+    padding: 0 1rem 0.2rem 0;
+  }
+}
+
+.getcard__btn-more{
+  color: $action-color;
+  font-size: 0.73rem;
+  border-bottom: 2px dashed $secondary-text-color;
+  margin-top: 1.5rem;
+  display: block;
+  width: max-content;
+}
+
+.getcard__btn-more:hover{
+  color: $action-color;
+}

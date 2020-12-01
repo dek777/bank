@@ -1,28 +1,47 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Modal 
+      :isModalVisible="isModalVisible"
+       @cancel="toggleModalVisible" 
+    />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Modal from '@/components/Modal.vue'
 
 export default {
   name: 'App',
+  data: () => {
+    return {
+      isModalVisible: false,
+    }
+  },
+  methods: {
+    toggleModalVisible(){
+      this.isModalVisible = !this.isModalVisible
+    }
+  },
+  mounted: [
+    function startActionBtnListeners(){
+      const buttons = document.querySelectorAll('.action-btn')
+      buttons.forEach( (button) => {
+        button.addEventListener ( 'click', (e) => {
+          e.preventDefault()
+          this.toggleModalVisible()
+        })
+      })
+    }
+  ],
   components: {
-    HelloWorld
+    Modal
   }
 }
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+#app{
+  font-family: 'Geometria', 'sans-serif';
 }
+
 </style>

@@ -4,14 +4,316 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <link rel="icon" href="img/favicon.png">
+    <title>Credit Bank</title>
   </head>
   <body>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
+
+    <aside class="header-menu">
+      <div class="header-menu__content">
+        <menu class="header-menu__list">
+          <a href="#benefits" class="header-menu__link">Какие преимущества</a>
+          <a href="#feature" class="header-menu__link">Что вы получаете</a>
+          <a href="#helper" class="header-menu__link">Еще сюрпризы</a>
+          <a href="#getcard" class="header-menu__link">Оформить карту</a>
+        </menu>
+        <div class="header-menu__contacts">
+          <p class="header-menu__secondary-text">По России</p>
+          <a href="tel:+78009506570" class="header-menu__phone">8 800 950 6570</a>
+          <p class="header-menu__secondary-text">По Миру</p>
+          <a href="tel:+78009506570" class="header-menu__phone">8 800 950 6570</a>
+        </div>
+      </div>
+    </aside>
+
+    
+    <div class="content-wrap"><!-- Обёртка для смещения контента при открытии бокового меню -->
+
+      <header>
+        <div class="container header__logo-bar">
+          <div id="burger-btn" class="header__burger">
+              <span></span>
+          </div>
+          <img src="img/logo_header.png" class="header__logo">
+        </div>
+
+        <div class="container header-text__wrap">
+          <h1> 
+            <span class="header__title">Твоя премиум<br>карта</span>
+            <p class="header__subtitle">Лучшая карта для<br>любителей путешествий</p>
+          </h1>
+          <div class="header__cards">
+            <div class="">
+              <p class="header-card__title">11%</p>
+              <p class="header-card__text">Вернем<br>за&nbsp;покупки<br>милями</p>
+            </div>
+            <div class="">
+              <p class="header-card__title">0%</p>
+              <p class="header-card__text">Бесплатное<br>снятие&nbsp;наличных<br>по&nbsp;всему&nbsp;миру</p>
+            </div>
+            <div class="">
+              <p class="header-card__title">7%</p>
+              <p class="header-card__text">До&nbsp;7%<br>на&nbsp;остаток<br>по&nbsp;счету</p>
+            </div>
+            <div class="">
+              <p class="header-card__title">0р</p>
+              <p class="header-card__text">Бесплатное<br>годовое<br>обслуживание</p>
+            </div>
+          </div>
+          <button class="action-btn">Заказать сейчас</button>
+        </div>
+        <picture>
+          <source srcset="img/card.webp" type="image/webp" class="header__img">
+          <img src="img/card.png" class="header__img">
+        </picture>
+      </header>
+
+      <section id="benefits" class="section section_benefits">
+        <div class="container">
+          <h2 class="section__title">Путешествие мечты начинается с&nbsp;CARD&nbsp;PLUS</h2>
+          <p class="section__subtitle">Мы продумали каждую мелочь. Владельцы CARD&nbsp;PLUS получают особый пакет привилегий, необходимый для&nbsp;любого путешествия</p>
+          <div class="benefits__cards-wrap">
+            <div class="benefits__card">
+              <img src="img/benefits/benefits_1.png" class="benefits__card-img">
+              <p class="benefits__card-title">Билеты любых<br>авиакомпаний</p>
+              <p class="benefits__card-text">Предложения от&nbsp;300+ авиакомпаний, 185+ lowcost перевозчиков, чартеры от&nbsp;60 крупных российских туроператоров</p>
+            </div>
+            <div class="benefits__card">
+              <img src="img/benefits/benefits_2.png" class="benefits__card-img">
+              <p class="benefits__card-title">Мили больше<br>не&nbsp;сгорают</p>
+              <p class="benefits__card-text">Мили, накопленные при оплате картой AlfaTravel, не&nbsp;сгорают и&nbsp;остаются на&nbsp;вашем счете, пока вы не&nbsp;решите их потратить</p>
+            </div>
+            <div class="benefits__card">
+              <img src="img/benefits/benefits_3.png" class="benefits__card-img">
+              <p class="benefits__card-title">Продвинутая<br>страховка –<br>бесплатно</p>
+              <p class="benefits__card-text">Расширенная страховка для&nbsp;всей семьи с&nbsp;учетом экстремальных видов спорта и&nbsp;алкоголя</p>
+            </div>
+            <div class="benefits__card">
+              <img src="img/benefits/benefits_4.png" class="benefits__card-img">
+              <p class="benefits__card-title">Доступ к счетам<br>в разных валютах</p>
+              <p class="benefits__card-text">Текущие счета в&nbsp;рублях, долларах США, евро, английских фунтах стерлингов и&nbsp;швейцарских франках открываются в&nbsp;любой момент</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="feature" class="section">
+        <div class="container">
+          <h2 class="section__title">Мы позаботились, чтобы&nbsp;вы&nbsp;получили</h2>
+          <div class="feature__wrap">
+
+            <div class="feature__card">
+              <div class="feature__img-wrap">
+                <img src="img/feature/feature_1.png" class="feature__img">
+              </div>
+              <p class="feature__title">Бесплатный безлимитный интернет в&nbsp;роуминге</p>
+              <p class="feature__text"></p>
+              <div class="feature__logos-wrap">
+                <img class="feature__logo" src="img/feature/logo-01.png">
+                <img class="feature__logo" src="img/feature/logo-02.png">
+                <img class="feature__logo" src="img/feature/logo-03.png">
+                <img class="feature__logo" src="img/feature/logo-04.png">
+              </div>
+            </div>
+
+            <div class="feature__card">
+              <div class="feature__img-wrap">
+                <img src="img/feature/feature_2.png" class="feature__img">
+              </div>
+              <p class="feature__title">Бесплатная упаковка багажа</p>
+              <p class="feature__text">Держатели карт Visa Signature могут упаковать багаж в&nbsp;крупных аэропортах России</p>
+              <div class="feature__logos-wrap">
+              </div>
+            </div>
+
+            <div class="feature__card">
+              <div class="feature__img-wrap">
+                <img src="img/feature/feature_3.png" class="feature__img">
+              </div>
+              <p class="feature__title">Бесплатный доступ в&nbsp;приложении App&nbsp;In&nbsp;The&nbsp;Air</p>
+              <p class="feature__text">Бесплатная премиум подписка при&nbsp;покупке авиабилетов на&nbsp;travel.alfabank.ru</p>
+              <div class="feature__logos-wrap">
+              </div>
+            </div>
+
+            <div class="feature__card">
+              <div class="feature__img-wrap">
+                <img src="img/feature/feature_4.png" class="feature__img">
+              </div>
+              <p class="feature__title">Такси бизнес-класса со&nbsp;скидкой&nbsp;20%</p>
+              <p class="feature__text"></p>
+              <div class="feature__logos-wrap">
+                <img class="feature__logo" src="img/feature/logo-07.png">
+                <img class="feature__logo" src="img/feature/logo-08.png">
+              </div>
+            </div>
+
+            <div class="feature__card">
+              <div class="feature__img-wrap">
+                <img src="img/feature/feature_5.png" class="feature__img">
+              </div>
+              <p class="feature__title">Скидка в ресторанах Novikov&nbsp;Group в&nbsp;аэропорту Шереметьево</p>
+              <p class="feature__text"></p>
+              <div class="feature__logos-wrap">
+              </div>
+            </div>
+
+            <div class="feature__card">
+              <div class="feature__img-wrap">
+                <img src="img/feature/feature_6.png" class="feature__img">
+              </div>
+              <p class="feature__title">Доступ в бизнес-залы Priority&nbsp;Pass по&nbsp;всему&nbsp;миру</p>
+              <p class="feature__text"></p>
+              <div class="feature__logos-wrap">
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section id="helper" class="section mb-0">
+        <div class="container">
+          <h2 class="section__title">Персональный помощник</h2>
+          <p class="section__subtitle"><span class="text_primary">Бесплатно для&nbsp;владельцев</span> <span class="text_action">CARD&nbsp;PLUS</span></p>
+        </div>
+        <div class="section_helper">
+          <div class="container container_helper">
+            <div class="helper__list-wrap">
+              <div class="helper__list-item">
+                <img src="img/helper/helper_1.png" class="helper__item-img">
+                <p class="helper__item-text">Организует встречи, найдет гидов и&nbsp;переводчиков</p>
+              </div>
+              <div class="helper__list-item">
+                <img src="img/helper/helper_2.png" class="helper__item-img">
+                <p class="helper__item-text">Спланирует поездку по&nbsp;самым интересным местам вашего отдыха</p>
+              </div>
+              <div class="helper__list-item">
+                <img src="img/helper/helper_3.png" class="helper__item-img">
+                <p class="helper__item-text">Достанет билеты на&nbsp;мероприятия, даже если их&nbsp;уже нет в&nbsp;продаже</p>
+              </div>
+              <div class="helper__list-item">
+                <img src="img/helper/helper_4.png" class="helper__item-img">
+                <p class="helper__item-text">Закажет столик в&nbsp;ресторане, клубе или&nbsp;кафе</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="getcard" class="section section_getcard">
+        <div class="container">
+          <h2 class="section__title">Оформите свою новую карту для&nbsp;путешествий</h2>
+          <div class="getcard-features__wrap">
+            <div class="getcard-feature">
+              <p class="getcard-feature__title">до 11%</p>
+              <p class="getcard-feature__text">Милями за&nbsp;услуги, оплаченные на&nbsp;travel.ru</p>
+            </div>
+            <div class="getcard-feature">
+              <p class="getcard-feature__title">до 11%</p>
+              <p class="getcard-feature__text">Милями за&nbsp;любые покупки по&nbsp;карте</p>
+            </div>
+            <div class="getcard-feature">
+              <p class="getcard-feature__title">1 = 1</p>
+              <p class="getcard-feature__text getcard-feature__text_width-220px">Оплата милями билетов любых авиакомпаний по&nbsp;курсу 1&nbsp;миля&nbsp;=&nbsp;1&nbsp;Р</p>
+            </div>
+          </div>
+          <div class="getcard__wrap">
+            <picture>
+              <source srcset="img/getcard_card.webp" type="image/webp" class="getcard__img">
+              <img src="img/getcard_card.png" class="getcard__img">
+            </picture>
+            <div class="getcard__tabs">
+              <input type="radio" name="tab-btn" id="getcard__tab-btn-1" value="" checked>
+              <label for="getcard__tab-btn-1">Кредитная карта</label>
+              <input type="radio" name="tab-btn" id="getcard__tab-btn-2" value="">
+              <label for="getcard__tab-btn-2">Дебетовая карта</label>
+              <button class="action-btn action-btn_width-250px action-btn_mt-mb-2rem">Отправить заявку</button>
+              <div id="getcard__tab-1">
+                <table class="getcard__table">
+                  <tr>
+                    <td rowspan="2" class="text_secondary">Стоимость карты в год (руб.)</td>
+                    <td class="text_light-grey">6 490 (без пакета услуг),</td>
+                  </tr>
+                  <tr>
+                    <td class="text_light-grey">4 990 (с пакетом услуг)</td>
+                  </tr>
+                  <tr>
+                    <td class="text_secondary">Приветственные мили (шт.)</td>
+                    <td class="text_light-grey">1 000</td>
+                  </tr>
+                  <tr>
+                    <td class="text_secondary">Мили за покупки</td>
+                    <td class="text_light-grey">5%</td>
+                  </tr>
+                </table>
+              </div>
+              <div id="getcard__tab-2">
+                <table class="getcard__table">
+                  <tr>
+                    <td rowspan="2" class="text_secondary">Стоимость карты в год (руб.)</td>
+                    <td class="text_light-grey">7 777 (без пакета услуг),</td>
+                  </tr>
+                  <tr>
+                    <td class="text_light-grey">8 888 (с пакетом услуг)</td>
+                  </tr>
+                  <tr>
+                    <td class="text_secondary">Приветственные мили (шт.)</td>
+                    <td class="text_light-grey">7 000</td>
+                  </tr>
+                  <tr>
+                    <td class="text_secondary">Мили за покупки</td>
+                    <td class="text_light-grey">7%</td>
+                  </tr>
+                </table>
+              </div>
+              <a href="#" class="getcard__btn-more">Все подробности</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div class="container footer__wrap">
+          <div class="footer__logo-wrap">
+            <a href="#">
+              <img src="img/footer/footer_logo.png" class="footer__logo">
+              <p class="footer__logo-text text_light-grey">АО «Кредит Европа Банк»</p>
+            </a>
+          </div>
+          <div class="footer__links-wrap">
+            <div class="footer__links">
+              <a href="#">О банке</a>
+              <a href="#">Офисы и банкоматы</a>
+              <a href="#">Новости</a>
+              <a href="#">Вакансии</a>
+              <a href="#">Реализуемое имущество</a>
+            </div>
+            <div class="footer__links">
+              <a href="#">Раскрытие информации</a>
+              <a href="#">Ставки по вкладам</a>
+              <a href="#"> Условия и тарифы</a>
+              <a href="#">Корпоративное управление</a>
+              <a href="#">Карта сайта</a>
+            </div>
+          </div>
+          <div class="footer__contacts">
+            <p class="footer__contacts-text">По России</p>
+            <a href="tel:+78009506570" class="footer__phone">8 800 950 6570</a>
+            <p class="footer__contacts-text">По Миру</p>
+            <a href="tel:+78009506570" class="footer__phone">8 800 950 6570</a>
+          </div>
+        </div>
+      </footer>
+
+      <div id="app"></div>
+      <!-- built files will be auto injected -->
+
+
+    </div><!-- / Обёртка для смещения контента при открытии бокового меню -->
+  
+
+  <script src="js/menu.js"></script>
+  <script src="js/smoothScroll.js"></script>
   </body>
 </html>
